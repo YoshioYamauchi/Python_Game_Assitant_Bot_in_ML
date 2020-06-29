@@ -1,0 +1,10 @@
+#!/bin/bash
+# Do not run this file in sudo mode. Otherwise you can't run the test file,
+# though the install works without error.
+sudo rm -r build
+sudo rm -r cameron_v2.egg-info
+sudo rm -r dist
+sudo python3 setup01.py install
+# sudo python3 setup01.py build_ext --inplace
+
+python3 ./test/test_model.py
